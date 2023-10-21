@@ -1,11 +1,16 @@
+"use client"
 import React from 'react'
 import Link from 'next/link'
 import {SocialIcon} from "react-social-icons"
+import { usePathname } from 'next/navigation'
+ 
 type Props = {}
 
 const Navbar = (props: Props) => {
+  const pathname = usePathname();
+  console.log(pathname)
   return (
-    <nav className='max-w-full  p-5 flex items-center justify-between'>
+    <nav className='sticky top-0 max-w-7xl   p-5 flex items-center justify-between z-20'>
 
         {/* Brand Logo */}
 
@@ -26,11 +31,11 @@ const Navbar = (props: Props) => {
          
 
         <div className='flex items-center space-x-4 md:space-x-8'>
-            <Link className='text-violet-500 hover:text-pink-700 uppercase tracking-wide md:tracking-widest text-sm md:text-base' href={'/'}>projects</Link>
-            <Link className='text-violet-500 hover:text-pink-700 uppercase tracking-wide md:tracking-widest text-sm md:text-base' href={'/'}>blog</Link>
-            <Link className='text-violet-500 hover:text-pink-700 uppercase tracking-wide md:tracking-widest text-sm md:text-base' href={'/'}>resume</Link>
+            {pathname !="/projects" && <Link className='text-violet-500 hover:text-pink-700 uppercase tracking-wide md:tracking-widest text-sm md:text-base' href={'/projects'}>projects</Link>}
+            {pathname !="/posts" &&<Link className='text-violet-500 hover:text-pink-700 uppercase tracking-wide md:tracking-widest text-sm md:text-base' href={'/posts'}>blog</Link>}
+            {pathname !="/" &&<Link className='text-violet-500 hover:text-pink-700 uppercase tracking-wide md:tracking-widest text-sm md:text-base' href={'/resume'}>resume</Link>}
            
-
+ 
         </div>
     </nav>
   )

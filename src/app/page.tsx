@@ -12,7 +12,7 @@ import Divider from '../components/Divider'
 
 export default function Home() {
   return (
-     <div className='w-full overflow-x-hidden '>
+     <div className='h-screen w-full overflow-x-hidden '>
   
         {/* navbar */}
         <Navbar/>

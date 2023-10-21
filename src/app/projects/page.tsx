@@ -15,10 +15,7 @@ const ProjectsPage = (props: Props) => {
                 <ProjectCard/> 
                 <ProjectCard/> 
                 <ProjectCard/> 
-                <ProjectCard/> 
-                <ProjectCard/> 
-                <ProjectCard/> 
-                <ProjectCard/> 
+                  
                 
                 
             </div>
