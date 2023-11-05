@@ -3,13 +3,22 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { getSocials,getProject } from "@/utils/sanity-utils";
+import { ProjectType } from "@/app/types/Project";
 
-type Props = {};
+type Props = {
+  params:{_id:string}
+};
 
-const ProjectPage = (props: Props) => {
+const ProjectPage =async ({params}: Props) => {
+  
+  const socialData=await getSocials()
+  const _id=params._id
+  const projectData:ProjectType=await getProject(_id)
+ 
   return (
     <section className="w-full bg-[#F1F6f9]">
-      <Navbar />
+      <Navbar props={socialData}/>
       <div className="min-h-screen flex flex-col max-w-7xl mx-auto my-4 md:my-8 p-4 space-y-4">
         <h1 className="font-extrabold text-3xl">ReHostify</h1>
         <div className="flex items-center justify-between">

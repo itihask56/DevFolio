@@ -9,15 +9,17 @@ import Blogs from '../components/Blogs'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import Divider from '../components/Divider'
+import { getSocials } from '@/utils/sanity-utils'
 
-export default function Home() {
+export default async function Home() {
+  const socialData=await getSocials()
   return (
-     <div className='h-screen w-full overflow-x-hidden '>
+     <div className='h-screen w-full overflow-x-hidden bg-black '>
   
         {/* navbar */}
-        <Navbar/>
+        <Navbar props={socialData}/>
         {/* header */}
-        <Header/> 
+        <Header props={socialData}/> 
         <Divider/> 
 
         {/* <Hero/>  */}
@@ -33,9 +35,11 @@ export default function Home() {
         <Divider/> 
         {/* blogs */}
         <Blogs/> 
+        <Divider/> 
 
         {/* contact */}
         <Contact/> 
+        <Divider/> 
         {/* footer */}
         <Footer></Footer>
        

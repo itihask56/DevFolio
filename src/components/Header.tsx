@@ -1,13 +1,19 @@
-"use client";
+ 
+'use client'
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { SocialIcon } from "react-social-icons";
 import Motion from "./Motion";
+import {Social} from '@/app/types/Social'
+// import { Profile } from "@/app/types/Profile";
+// import {getProfile} from'@/utils/sanity-utils'
 
-type Props = {};
+type Props = {
+  props:Social[]
+};
 
-const Header = (props: Props) => {
+const Header = ({props}: Props) => {
   return (
     <section className="relative z-0 h-[calc(100vh-56px)] w-full flex items-center justify-center ">
       <div className="flex flex-col items-center justify-center space-y-4">
@@ -15,7 +21,7 @@ const Header = (props: Props) => {
           <div className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 rounded-full h-40 w-40 flex items-center justify-center shadow-lg shadow-gray-500 hover:scale-105 duration-500">
             <Image
               className=""
-              src={"/images/hero-image.png"}
+              src={"/images/Image2.png"}
               alt="itihas"
               height={150}
               width={150}
@@ -23,13 +29,13 @@ const Header = (props: Props) => {
           </div>
         </Motion>
         <Motion delay={1} direction={""}>
-          <p className="font-bold ">
+          <p className="font-bold text-violet-400">
             I am Itihas Verma a Tech Enthusiast and aspiring Enterprenure{" "}
           </p>
         </Motion>
 
         <TypeAnimation
-          className="text-3xl font-extrabold"
+          className="text-3xl font-extrabold text-violet-400"
           sequence={[
             // Same substring at the start will only be typed out once, initially
             "< Mr_Verma />",
@@ -72,6 +78,9 @@ const Header = (props: Props) => {
               className="hover:scale-125 duration-200"
               url="https://www.linkedin.com/in/itihas-verma-71641b266/"
             />
+             {/* {props?.map((s:Social,index:number)=>(
+          <SocialIcon key={index} style={{height:40,width:40}} bgColor='#793FEF' className='hover:scale-125 duration-200' url={s.url} />
+        ))} */}
           </div>
         </Motion>
       </div>

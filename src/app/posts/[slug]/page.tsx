@@ -3,15 +3,26 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import {getSocials } from "@/utils/sanity-utils";
+// import { BlogPost } from "@/app/types/BlogPost";
+// import {PortableText} from '@portabletext/react';
+// import { Category } from "@/app/types/Category";
+// import  {getBlogPost} from '@/utils/sanity-utils'
 
-type Props = {};
 
-const PostPage = (props: Props) => {
+type Props = {
+  // params:{slug:string}
+};
+
+const PostPage = async (params: Props) => {
+  // const slug=params.slug
+  // const postData:BlogPost=await getBlogPost(slug)
+  const socialData = await getSocials()
   return (
     <section className="w-full bg-[#F1F6f9]">
-      <Navbar />
+      <Navbar props={socialData} />
       <div className="min-h-screen flex flex-col max-w-7xl mx-auto my-4 md:my-8 p-4 space-y-4">
-        <h1 className="font-extrabold text-3xl">ReHostify: Campus commerce made easy</h1>
+        <h1 className="font-extrabold text-3xl">Why TypeScript Learning is Important</h1>
         <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2 text-sm text-violet-500">
               <p>Author::</p>
@@ -19,16 +30,26 @@ const PostPage = (props: Props) => {
         </div>
         <div className="flex items-center space-x-2 text-sm text-violet-500">
               <p>Created at:</p>
-              <p className="font-bold">20/10/12</p>
+              <p className="font-bold">2023/10/12</p>
         </div>
         </div>
         <Image
-          src={"/images/fourth.jpg"}
+          // src={postData.mainImage}
+          src={'/images/fourth.jpg'}
           height={500}
           width={500}
           alt="not available"
           className="w-full rounded-2xl border-2 border-violet-500"
         />
+        {/* <PortableText value={postData.body}/>
+        <div className='flex items-center space-x-4 text-violet-500'>
+            <h3>Category:</h3>
+            <div className='flex items-center space-x-2 text-sm font-bold'>
+               {postData.categories.map((c:Category,index:number)=>(
+                <p key={index} className='bg-violet-200 rounded-lg p-1'>{c.title}</p> 
+               ))}
+            </div>
+        </div> */}
         <p className="text-xl">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum
           doloremque dolore ipsa, odio id. Perspiciatis magni incidunt inventore
@@ -59,6 +80,7 @@ const PostPage = (props: Props) => {
             <p className="bg-violet-100 rounded-lg p-1">Sanity</p>
           </div>
         </div>
+
       </div>
       <Footer />
     </section>
