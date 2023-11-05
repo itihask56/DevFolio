@@ -31,9 +31,9 @@ const Contact = (props: Props) => {
       >
         <input
           {...register("name", { required: true })}
-          placeholder="your name..."
+          placeholder="Aapka Subh Name..."
           type="text"
-          className=" placeholder-violet-400 border border-violet-500 focus:outline-none p-2 bg-transparent rounded-lg w-full "
+          className=" placeholder-violet-100 placeholder-opacity-40 border border-violet-500 focus:outline-none p-2 bg-transparent rounded-lg w-full text-white "
         />
         {errors.name && (
           <span className="text-sm text-red-500">This field is required</span>
@@ -41,18 +41,18 @@ const Contact = (props: Props) => {
 
         <input
           {...register("subject", { required: true })}
-          placeholder="subject..."
+          placeholder="kis vishay me...."
           type="text"
-          className=" placeholder-violet-400 border border-violet-500 focus:outline-none p-2 bg-transparent rounded-lg w-full "
+          className="placeholder-violet-100 placeholder-opacity-40 border border-violet-500 focus:outline-none p-2 bg-transparent rounded-lg w-full text-white  "
         />
         {errors.subject && (
           <span className="text-sm text-red-500">This field is required</span>
         )}
         <textarea
           {...register("message", { required: true })}
-          placeholder="your message"
+          placeholder="Aapka sandesh..."
           rows={9}
-          className=" placeholder-violet-400 border border-violet-500 focus:outline-none p-2 bg-transparent rounded-lg w-full "
+          className="placeholder-violet-100 placeholder-opacity-40 border border-violet-500 focus:outline-none p-2 bg-transparent rounded-lg w-full text-white  "
         />
         {errors.message && (
           <span className="text-sm text-red-500">This field is required</span>

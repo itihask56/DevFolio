@@ -9,15 +9,15 @@ const Footer = (props: Props) => {
     <footer className="bg-violet-900 w-full py-5">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
         <Motion delay={1} direction={'left'}>
-        <div className="flex items-center text-xl text-violet-300">
+        <div className="flex items-center text-xs md:text-lg text-violet-300">
           <h1>Dev.Verma</h1>
         </div>
         </Motion>
         <Motion delay={1} direction="up">
-          <p className="text-violet-300 text-xs md:text-sm">Made With <span className='text-red-600'>&hearts;</span> by Itihas</p>
+          <p className="text-violet-300 text-xs md:text-lg">Made With <span className='text-red-600'>&hearts;</span> by Itihas</p>
           </Motion>
           <Motion delay={1} direction="right">
-          <p className='text-violet-300'>&copy; All rights reserved.</p>
+          <p className='text-violet-300 text-xs md:text-lg'>&copy; All rights reserved.</p>
           </Motion>
 
 

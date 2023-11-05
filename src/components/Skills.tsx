@@ -9,7 +9,7 @@ type Props = {};
 const Skills = async (props: Props) => {
   const skillData:Skill[]=await getSkills()
   return (
-    <section className="h-screen p-5 max-w-7xl mx-auto flex flex-col items-center justify-center space-y-24">
+    <section className="h-screen p-5 max-w-7xl mx-auto flex flex-col items-center justify-center space-y-24 my-24">
       <h1 className="text-2xl uppercase tracking-[20px] text-violet-500">
         skills
       </h1>

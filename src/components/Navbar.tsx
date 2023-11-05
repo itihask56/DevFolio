@@ -16,7 +16,7 @@ const Navbar = ({props}: Props) => {
   const pathname = usePathname();
   // console.log(pathname);
   return (
-    <nav className="sticky top-0 w-full p-5 flex items-center justify-between z-20">
+    <nav className="sticky top-0 w-full p-5 flex items-center justify-between z-20 bg-black/30 backdrop-blur-sm ">
       {/* Brand Logo */}
       <Motion delay={1} direction={'left'}>
       <div>
@@ -60,7 +60,7 @@ const Navbar = ({props}: Props) => {
             blog
           </Link>
         )}
-        {pathname != "/" && (
+        {pathname != "/resume" && (
           <Link
             className="text-violet-500 hover:text-pink-700 uppercase tracking-wide md:tracking-widest text-sm md:text-base"
             href={"/resume"}

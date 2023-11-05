@@ -14,7 +14,7 @@ const Blogs = async (props: Props) => {
         Blogs
       </h1>
      
-      <div className="flex flex-col items-start space-y-3 w-full">
+      <div className="w-full flex flex-col items-start space-y-3 ">
         <BlogCard />
         <BlogCard />
         <BlogCard />
@@ -23,7 +23,7 @@ const Blogs = async (props: Props) => {
 
       </div>
       
-      <Link href={'/posts'}> <p className="text-center text-xs text-violet-300 cursor-pointer">
+      <Link href={'/posts'}> <p className="text-center text-xs text-violet-500 cursor-pointer">
         see more...
       </p>
       </Link>

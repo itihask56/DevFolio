@@ -17,7 +17,7 @@ const BlogCard = (props: Props) => {
    
     </p>
  
-    <p className='text-center text-sm text-violet-500 hidden md:block'>2023/10/12</p>
+    <p className='text-sm text-violet-500 hidden md:block'>2023/10/12</p>
 
  
 </Motion>

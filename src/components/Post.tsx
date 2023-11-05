@@ -9,7 +9,7 @@ type Props = {
 
 const Post = (props: Props) => {
   return (
-      <Link href={"/posts/slug"} className='flex items-center border-2 border-violet-400 hover:scale-105 duration-500 space-x-4 bg-violet-100 rounded-lg shadow-lg shadow-gray-300 p-3'>
+      <Link href={"/posts/slug"} className='flex items-center border-2 border-violet-400 hover:scale-105 duration-500 space-x-4 bg-violet-100 rounded-lg shadow-xl shadow-violet-800 p-3'>
         <div className="w-[40%]">
        
         <Image src={'/images/fourth.jpg'} alt='blog image' height={100} width={100} className='w-full object-cover rounded-lg'></Image>

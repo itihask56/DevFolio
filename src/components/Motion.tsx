@@ -36,7 +36,7 @@ const Motion = ({ children, delay, direction }: Props) => {
         initial="hidden"
         animate={controls}
         transition={{
-          duration: 1.5,
+          duration: 2,
           type: "tween",
           delay: delay,
           ease: easeOut,

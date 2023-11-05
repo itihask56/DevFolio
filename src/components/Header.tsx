@@ -18,7 +18,7 @@ const Header = ({props}: Props) => {
     <section className="relative z-0 h-[calc(100vh-56px)] w-full flex items-center justify-center ">
       <div className="flex flex-col items-center justify-center space-y-4">
         <Motion delay={1} direction={"down"}>
-          <div className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 rounded-full h-40 w-40 flex items-center justify-center shadow-lg shadow-gray-500 hover:scale-105 duration-500">
+          <div className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 rounded-full h-40 w-40 flex items-center justify-center shadow-lg shadow-violet-500 hover:scale-105 duration-500">
             <Image
               className=""
               src={"/images/Image2.png"}
@@ -30,21 +30,21 @@ const Header = ({props}: Props) => {
         </Motion>
         <Motion delay={1} direction={""}>
           <p className="font-bold text-violet-400">
-            I am Itihas Verma a Tech Enthusiast and aspiring Enterprenure{" "}
+            A Tech Enthusiast from Chandigarh Univesity{" "}
           </p>
         </Motion>
 
         <TypeAnimation
-          className="text-3xl font-extrabold text-violet-400"
+          className="text-xl md:text-4xl font-extrabold text-violet-400"
           sequence={[
             // Same substring at the start will only be typed out once, initially
-            "< Mr_Verma />",
-            1500, // wait 1s before replacing "Mice" with "Hamsters"
+            // "< Mr_Verma />",
+            // 1500, // wait 1s before replacing "Mice" with "Hamsters"
             "< Web Developer />",
             1500,
-            "<Enterprenuer />",
+            "Enterprenuer",
             1500,
-            "< Ethical Hacker />",
+            "{ Programer }",
             1500,
           ]}
           wrapper="span"
